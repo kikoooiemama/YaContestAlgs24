@@ -1,21 +1,26 @@
 20
+# проверка охлаждения
 -50 50 freeze
 10 25 freeze
 10 10 freeze
 15 10 freeze
 -5 -15 freeze
+# проверка нагрева
 -50 50 heat
 10 25 heat
 50 15 heat
 -50 -5 heat
 0 0 heat
+# проверка автоматики
 -50 50 auto
 -5 10 auto
 35 5 auto
 -5 -35 auto
 -50 -50 auto
+# проверка вентилятора
 -50 -50 fan
 5 5 fan
 -50 50 fan
 25 0 fan
 50 50 fan
+
