@@ -20,10 +20,6 @@ def count_kit(n, k, cars):
     return ans
 
 
-with open("input.txt") as f:
-    a, b = map(int, f.readline().split())
-    c = list(map(int, f.readline().split()))
-
 n_list = []
 k_list = []
 cars_list = []
