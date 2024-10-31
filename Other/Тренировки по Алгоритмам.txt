@@ -40,12 +40,18 @@ prefixsum[i] = prefixsum[i-1] + nums[i-1]
 
 O(1): sum(L, R) = prefixsum[R] - prefixsum[L]
 
-Недостаток: нельзя менять элементы -> придется пересчитывать все префиксные суммы.
+Недостаток: нельзя менять элементы -> придется пересчитывать все префиксные суммы, а это O(N)!
 
 Реализация RSQ:
-def make:
+def make(nums):
+    prefixsum = [0] * (len(nums) + 1)
+    for i in range(1, len(nums) + 1):
+        prefixsum[i] = prefixsum[i-1] + nums[i-1]
+    return prefixsum
 
-def count:
+# [L, R)
+def rsq(prefixsum, l, r):
+    return prefixsum[r] - prefixsum[l]
 
 Задачи:
 - Дана последовательность N. Найти количество нулей на отрезке для M запросов. O(N+M)
