@@ -9,13 +9,6 @@ def count_vars(n, r, d):
     return ans
 
 
-with open("input.txt") as f:
-    a, b = map(int, f.readline().split())
-    m = list(map(int, f.readline().split()))
-
-result = count_vars(a, b, m)
-print(result)
-
 n_list = []
 r_list = []
 d_list = []
