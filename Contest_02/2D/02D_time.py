@@ -1,4 +1,7 @@
-# Created by Nikolay Pakhomov 27.10.2024
+# Created by Nikolay Pakhomov 01.11.2024
+import timeit
+
+code_to_test = """
 def calculate_min_days(n, dist, cases):
     max_sum = 0
     now_sum = 0
@@ -17,10 +20,14 @@ def calculate_min_days(n, dist, cases):
     return max_sum
 
 
-with open("input.txt") as f:
+with open("input_time.txt") as f:
     b, c = map(int, f.readline().split())
     al = list(map(int, f.readline().split()))
 
 al.sort()
 ans = calculate_min_days(b, c, al)
 print(ans)
+"""
+# вычисление времени выполнения кода
+elapsed_time = timeit.timeit(code_to_test, number=100) / 100
+print('Elapsed time: ', elapsed_time)
