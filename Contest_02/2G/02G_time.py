@@ -1,5 +1,11 @@
+# Created by Nikolay Pakhomov 02.11.2024
+import timeit
+
+code_to_test = """
 # Created by Nikolay Pakhomov 27.10.2024
 def find_max_len_substring(n, c, s):
+    if n == 1:
+        return 1
     count_a = count_b = cur_c = 0
     i = r = best_l = best_r = 0
     while r < n:
@@ -28,9 +34,13 @@ def find_max_len_substring(n, c, s):
     return best_r - best_l + 1
 
 
-with open("input.txt") as f:
+with open("input_time.txt") as f:
     s_len, max_difficulty = map(int, f.readline().split())
     row = f.readline().strip()
 
 ans = find_max_len_substring(s_len, max_difficulty, row)
 print(ans)
+"""
+# вычисление времени выполнения кода
+elapsed_time = timeit.timeit(code_to_test, number=100) / 100
+print('Elapsed time: ', elapsed_time)

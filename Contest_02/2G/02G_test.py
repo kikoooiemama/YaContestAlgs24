@@ -1,4 +1,4 @@
-# Created by Nikolay Pakhomov 27.10.2024
+# Created by Nikolay Pakhomov 02.11.2024
 def find_max_len_substring(n, c, s):
     count_a = count_b = cur_c = 0
     i = r = best_l = best_r = 0
@@ -34,3 +34,26 @@ with open("input.txt") as f:
 
 ans = find_max_len_substring(s_len, max_difficulty, row)
 print(ans)
+
+
+n_list = []
+c_list = []
+s_list = []
+result_list = []
+with open('input_test.txt') as f:
+    test_n = int(f.readline().strip())
+    for i in range(test_n):
+        f.readline()
+        nn, kk = map(int, f.readline().split())
+        aa = f.readline().strip()
+        n_list.append(nn)
+        c_list.append(kk)
+        s_list.append(aa)
+
+with open('output_test.txt') as f:
+    for i in range(test_n):
+        result_list.append(int(f.readline().strip()))
+
+for i in range(test_n):
+    res = find_max_len_substring(n_list[i], c_list[i], s_list[i])
+    print(f"Result: {res}, Answer: {result_list[i]}, Right: {res == result_list[i]}")
