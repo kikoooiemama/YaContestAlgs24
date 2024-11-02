@@ -1,4 +1,4 @@
-# Created by Nikolay Pakhomov 27.10.2024
+# Created by Nikolay Pakhomov 02.11.2024
 def get_prefix_sum(n, nums):
     prefixsum = [0] * (n + 1)
     for i in range(1, n + 1):
@@ -26,10 +26,23 @@ def find_min_shifts(n, a, prefix_sum):
     return min_shifts
 
 
-with open("input.txt") as f:
-    rooms_n = int(f.readline())
-    rooms = list(map(int, f.readline().split()))
+n_list = []
+a_list = []
+result_list = []
+with open('input_test.txt') as f:
+    test_n = int(f.readline().strip())
+    for i in range(test_n):
+        f.readline()
+        nn = int(f.readline().strip())
+        aa = list(map(int, f.readline().split()))
+        n_list.append(nn)
+        a_list.append(aa)
 
-ps = get_prefix_sum(rooms_n, rooms)
-ans = find_min_shifts(rooms_n, rooms, ps)
-print(ans)
+with open('output_test.txt') as f:
+    for i in range(test_n):
+        result_list.append(int(f.readline().strip()))
+
+for i in range(test_n):
+    ps = get_prefix_sum(n_list[i], a_list[i])
+    res = find_min_shifts(n_list[i], a_list[i], ps)
+    print(f"Result: {res}, Answer: {result_list[i]}, Right: {res == result_list[i]}")
