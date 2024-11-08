@@ -4,7 +4,6 @@ with open("input.txt") as f:
 
 stack = []
 for el in postfix:
-    a, b = 0, 0
     if el == "+":
         stack.append(stack.pop(-1) + stack.pop(-1))
     elif el == "*":
