@@ -13,7 +13,7 @@ def calculate_min_days(n, dist, cases):
     r = 0
     previous = 0
     for i in range(n):
-        # анализ повторных значений, их нужно пропускать т.к. для них будет одинаковое количество now_sum
+        # Анализ повторных значений, их нужно пропускать т.к. для них будет одинаковое количество now_sum
         if cases[i] == previous:
             now_sum -= 1
             continue
