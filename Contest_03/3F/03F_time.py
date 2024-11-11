@@ -1,4 +1,7 @@
-# Created by Nikolay Pakhomov 04.11.2024
+# Created by Nikolay Pakhomov 12.11.2024
+import timeit
+
+code_to_test = """
 def get_psp(n, w, s):
     order = {"(": (0, ")"), ")": (0, "("), "[": (0, "]"), "]": (0, "[")}
     start = ""
@@ -32,12 +35,18 @@ def get_psp(n, w, s):
         else:
             result += ending[j]
             j += 1
+    print(len(result))
     return result
 
 
-with open("input.txt") as f:
+with open("input_max.txt") as f:
     size = int(f.readline().strip())
     weight = f.readline().strip()
     first = f.readline().strip()
 
 print(get_psp(size, weight, first))
+
+"""
+# вычисление времени выполнения кода
+elapsed_time = timeit.timeit(code_to_test, number=100) / 100
+print('Elapsed time: ', elapsed_time)
