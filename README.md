@@ -1,9 +1,12 @@
 # YaTrainingAlgs24
-Тренировки по алгоритмам.
+Тренировки по алгоритмам 6.0 от Яндекс.
 
 ### Лекции:
 
-1. Тестирование [YouTube](https://www.youtube.com/live/c67zB3FWLOs?m-message-key-id=-8291126905549455360&m-message-click-id=a61922f8-0d66-4cc7-9bdd-b610246f0826&utm_source=mindbox&utm_medium=email&utm_campaign=training6&utm_content=digest&utm_term=24.10.2024)[VK](https://vk.com/video/@young_and_yandex?z=video-220652761_456239269%2Fclub220652761%2Fpl_-220652761_-2)
+1. Тестирование [YouTube](https://www.youtube.com/watch?v=c67zB3FWLOs&t=2015s&ab_channel=Young%26%26Yandex) [VK](https://vk.com/video/@young_and_yandex?z=video-220652761_456239269%2Fpl_-220652761_-2)
+2. Префиксные суммы и два указателя [YouTube](https://www.youtube.com/live/B4uP6igiVNU) [VK](https://vk.com/video-220652761_456239273)
+3. Стеки, очереди, деки [YouTube](https://www.youtube.com/live/km0E_i8Dtso) [VK](https://vk.com/video/@young_and_yandex?z=video-220652761_456239277%2Fpl_-220652761_-2)
+4. Деревья, представления и обходы [YouTube]() [VK]()
 
 ### План:
 
@@ -15,4 +18,4 @@
 | 4. Деревья, представления и обходы | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> |
 
 ### Результат:
-15/34
+25/34
