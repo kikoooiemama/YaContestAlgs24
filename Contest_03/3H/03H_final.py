@@ -17,5 +17,5 @@ with open("input.txt") as f:
             k = int(operation[1:])
             print(rsq(prefix_sum, len(stack) - k, len(stack)))
         else:
-            prefix_sum.pop(-1)
-            print(stack.pop(-1))
+            prefix_sum.pop()
+            print(stack.pop())
