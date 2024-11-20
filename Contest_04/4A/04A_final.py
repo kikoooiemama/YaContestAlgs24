@@ -21,7 +21,7 @@ with open("input.txt") as f:
         tree[dad][1].append(son)
         if tree[dad][0] is None:
             root.add(dad)
-    root = root.pop()
-    find_depth(root, 0)
-    for name in sorted(tree.keys()):
-        print(name, tree[name][2])
+root = root.pop()
+find_depth(root, 0)
+for name in sorted(tree.keys()):
+    print(name, tree[name][2])

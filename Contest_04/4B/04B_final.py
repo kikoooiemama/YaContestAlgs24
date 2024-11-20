@@ -5,9 +5,8 @@ import sys
 def calculate_sons(rt):
     n_sons = 0
     children = tree[rt][1]
-    if len(children) > 0:
-        for child in children:
-            n_sons += calculate_sons(child) + 1
+    for child in children:
+        n_sons += calculate_sons(child) + 1
     tree[rt][2] = n_sons
     return n_sons
 
@@ -27,7 +26,7 @@ with open("input.txt") as f:
         tree[dad][1].append(son)
         if tree[dad][0] is None:
             root.add(dad)
-    root = root.pop()
-    calculate_sons(root)
-    for name in sorted(tree.keys()):
-        print(name, tree[name][2])
+root = root.pop()
+calculate_sons(root)
+for name in sorted(tree.keys()):
+    print(name, tree[name][2])
