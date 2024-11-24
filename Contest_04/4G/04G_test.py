@@ -1,4 +1,7 @@
 # Created by Nikolay Pakhomov 21.11.2024
+import sys
+
+
 def mod_fact(r, mod):
     if r == 0:
         return 1
@@ -45,7 +48,7 @@ def rec_find_subtree_one(rt, structures, mod):
             return -1
         combs_one = sub_tree_one_by_mod
     combs_one = (combs_one * mod_fact(len(tree_one[1]), mod))
-    combs_one = (combs_one * (2 % mod)) % mod
+    # combs_one = (combs_one * (2 % mod)) % mod
     return combs_one
 
 
@@ -127,7 +130,7 @@ def find_tree(root, structures, mod):
             combs = (combs * sub_combs) % mod
     elif tree[0] == 0:
         combs = (combs * mod_fact(len(tree[1]), mod)) % mod
-        combs = (combs * (2 % mod)) % mod
+        # combs = (combs * (2 % mod)) % mod
     return combs
 
 
@@ -237,6 +240,7 @@ def calculate_combinations(n, mod, edges):
     return result
 
 
+sys.setrecursionlimit(1000000000)
 n_list = []
 m_list = []
 k_list = []
@@ -260,4 +264,4 @@ for i in range(2, test_n + 2):
 
 for ii in range(test_n):
     ans = calculate_combinations(n_list[ii], k_list[ii], a_b_list[ii])
-    print(f"Test-{ii+2}, Result: {ans}, Answer: {result_list[ii]}, Right: {ans == result_list[ii]}")
+    print(f"Test-{ii + 2}, Result: {ans}, Answer: {result_list[ii]}, Right: {ans == result_list[ii]}")

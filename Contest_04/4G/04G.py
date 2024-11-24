@@ -36,7 +36,9 @@
 # Trees == 1, t = 1:
 # В tree может быть и subtree
 
-# Вычисление факториала по модулю
+import sys
+
+
 def mod_fact(r, mod):
     if r == 0:
         return 1
@@ -47,16 +49,13 @@ def mod_fact(r, mod):
     return answer
 
 
-def mod_power(base, power, mod):
-    if base == 0:
-        return 0
-    if power == 0:
-        return 1
-    answer = j = 1
-    while j < power + 1:
-        answer = (answer * (base % mod)) % mod
-        j += 1
-    return answer
+def mod_frees(n_slots, n_free, mod):
+    # это можно улучшить префиксными суммами.
+    if n_free <= n_slots:
+        pass
+    else:
+        pass
+    return 0
 
 
 def rec_find_subtree_one(rt, structures, mod):
@@ -170,9 +169,9 @@ def find_tree(root, structures, mod):
                 return -1
             combs = (combs * sub_combs) % mod
     # Дерево - ветка.
-    elif tree[0] == 0:
+    elif len(tree[0]) == 0:
         combs = (combs * mod_fact(len(tree[1]), mod)) % mod
-        combs = (combs * (2 % mod)) % mod
+        # combs = (combs * (2 % mod)) % mod
     return combs
 
 
@@ -230,14 +229,15 @@ def calculate_combinations(n, mod, edges):
     # * trees_n!
     trees_shifts_by_mod = mod_fact(trees_n, mod)
     result = (trees_combinations * trees_shifts_by_mod) % mod
-    # * (trees_els_n + 2)^s, s = len(singles)
-    solos_by_mod = mod_power(trees_els_n + 2, len(singles), mod)
+    # mod_frees
+    solos_by_mod = mod_frees(trees_els_n + 2, len(singles), mod)
     result = (result * solos_by_mod) % mod
     return result
 
 
+sys.setrecursionlimit(1000000000)
 a_b = []
-with open("input.txt") as f:
+with open("input7.txt") as f:
     # 1 <= n <= 10^6, 1 <= M <= 10^7 - количество пар знакомых дятлов, 1 <= k <= 2*10^6
     amount, m, km = map(int, f.readline().split())
     for i in range(m):
