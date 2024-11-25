@@ -49,13 +49,53 @@ def mod_fact(r, mod):
     return answer
 
 
+# def find_options(res, a, n, k):
+#     if n:
+#         for j in range(n + 1, 0, -1):
+#             if j > n - k:
+#                 if j <= p:
+#                     find_options(res, a + [j], n - j, j, k)
+#     else:
+#         res.append(a)
+
+def find_options():
+    pass
+
+
+
+def pp(mm, nn, mod):
+    j = nn
+    th = nn - mm
+    rs = 1
+    while j > th and j > 1:
+        rs = rs * (j % mod) % mod
+        j -= 1
+    return rs
+
+
+# mod_frees и find_options можно объединить
 def mod_frees(n_slots, n_free, mod):
     # это можно улучшить префиксными суммами.
-    if n_free <= n_slots:
-        pass
-    else:
-        pass
-    return 0
+    print("===CЧИТАЕМ OPTIONS:")
+    options = []
+    # find_options(options, [], n_free, n_free, n_slots)
+    print("===ПОСЧИТАЛИ OPTIONS, СЧИТАЕМ СУММУ")
+    cs = 0
+    for option in options:
+        j = 0
+        cs_opt = 1
+        remainder = n_free
+        while j < len(option):
+            am = option[j]
+            if am == 1:
+                cs_opt = (cs_opt * ((n_slots - j) % mod)) % mod
+            else:
+                cs_opt = (cs_opt * (((n_slots - j) % mod) * pp(am, remainder, mod)) % mod) % mod
+            remainder = remainder - am
+            j += 1
+        cs = (cs + cs_opt) % mod
+    print("===СУММУ ПОСЧИТАЛИ")
+    return cs
 
 
 def rec_find_subtree_one(rt, structures, mod):
@@ -177,6 +217,7 @@ def find_tree(root, structures, mod):
 
 # Считаем комбинации для всех дятлов
 def calculate_combinations(n, mod, edges):
+    print("===СЧИТАЕМ ДЕРЕВЬЯ:")
     if n == 1:
         return 2
     structures = {}
@@ -230,14 +271,16 @@ def calculate_combinations(n, mod, edges):
     trees_shifts_by_mod = mod_fact(trees_n, mod)
     result = (trees_combinations * trees_shifts_by_mod) % mod
     # mod_frees
+    print("===ДЕРЕВЬЯ ОБСЧИТАЛИ, СЧИТАЕМ СВОБОДНЫХ!")
     solos_by_mod = mod_frees(trees_els_n + 2, len(singles), mod)
+    print("===СВОБОДНЫЕ ДЯТЛЫ ОБСЧИТАЛИ:")
     result = (result * solos_by_mod) % mod
     return result
 
 
 sys.setrecursionlimit(1000000000)
 a_b = []
-with open("input7.txt") as f:
+with open("input4.txt") as f:
     # 1 <= n <= 10^6, 1 <= M <= 10^7 - количество пар знакомых дятлов, 1 <= k <= 2*10^6
     amount, m, km = map(int, f.readline().split())
     for i in range(m):
