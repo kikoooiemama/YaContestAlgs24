@@ -15,9 +15,9 @@
 | 1. [Тестирование](https://contest.yandex.ru/contest/66792/enter/) | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> |            -             |            -             |            -             |            -             |            -             |
 | 2. [Префиксные суммы и два указателя](https://contest.yandex.ru/contest/66793/enter/) | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> |
 | 3. [Стеки, очереди, деки](https://contest.yandex.ru/contest/66794/enter/) | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> |
-| 4. [Деревья, представления и обходы](https://contest.yandex.ru/contest/66795/enter/) | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> |
+| 4. [Деревья, представления и обходы](https://contest.yandex.ru/contest/66795/enter/) | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> |
 
 ### Результат:
-31/35
+За дедлайн решено 31/35.
 
-[Официальный зачет](https://)
+[Официальный рейтинг](https://yandex.ru/yaintern/training/results?m-message-key-id=6037075300611883008&m-message-click-id=32b0966c-72ae-4cdb-bdb3-50423b54f1f0&utm_source=mindbox&utm_medium=email&utm_campaign=training6&utm_content=promo&utm_term=06.12.2024)
