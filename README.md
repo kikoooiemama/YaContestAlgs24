@@ -18,6 +18,6 @@
 | 4. [Деревья, представления и обходы](https://contest.yandex.ru/contest/66795/enter/) | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> |
 
 ### Результат:
-За дедлайн решено 31/35.
+За дедлайн решено 31/35. В рейтинге №354.
 
 [Официальный рейтинг](https://yandex.ru/yaintern/training/results?m-message-key-id=6037075300611883008&m-message-click-id=32b0966c-72ae-4cdb-bdb3-50423b54f1f0&utm_source=mindbox&utm_medium=email&utm_campaign=training6&utm_content=promo&utm_term=06.12.2024)

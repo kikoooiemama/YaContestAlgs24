@@ -1,8 +1,6 @@
 # Created by Nikolay Pakhomov 21.11.2024
 import sys
 
-import sys
-
 
 def mod_fact(r, mod):
     if r == 0:
@@ -14,43 +12,16 @@ def mod_fact(r, mod):
     return answer
 
 
-def find_options(res, a, n, p, k):
-    if n:
-        for j in range(n + 1, 0, -1):
-            if j > n - k:
-                if j <= p:
-                    find_options(res, a + [j], n - j, j, k)
-    else:
-        res.append(a)
-
-
-def pp(mm, nn, mod):
-    j = nn
-    th = nn - mm
-    rs = 1
-    while j > th and j > 1:
-        rs = rs * (j % mod) % mod
-        j -= 1
-    return rs
-
-
 def mod_frees(n_slots, n_free, mod):
-    options = []
-    find_options(options, [], n_free, n_free, n_slots)
-    cs = 0
-    for option in options:
-        j = 0
-        cs_opt = 1
-        remainder = n_free
-        while j < len(option):
-            am = option[j]
-            if am == 1:
-                cs_opt = (cs_opt * ((n_slots - j) % mod)) % mod
-            else:
-                cs_opt = (cs_opt * (((n_slots - j) % mod) * pp(am, remainder, mod)) % mod) % mod
-            remainder = remainder - am
-            j += 1
-        cs = (cs + cs_opt) % mod
+    if n_free == 0:
+        return 1
+    cs = 1
+    j = n_slots
+    th = n_free + n_slots
+    while j < th:
+        cs = (cs * (j % mod)) % mod
+        j += 1
+    # cs = (cs * (2 % mod)) % mod
     return cs
 
 
